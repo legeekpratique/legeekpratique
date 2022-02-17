@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <title>Le Geek Pratique - Conseils et accompangement digital</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../dist/style.css" />
+  <!-- <link rel="stylesheet" href="assets/styles.css" /> -->
+  <!-- <link rel="stylesheet" href="/path/to/tailwind.css"> -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ... -->
+</head>
+<body>  
+
+  <!-- NAVIGATION -->
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+      <div class="flex justify-start lg:w-0 lg:flex-1">
+        <a href="/index.html">
+          <span class="sr-only">Le Geek Pratique</span>
+          <img class="h-8 w-auto sm:h-10" src="assets/logo.png" alt="logo le geek pratique">
+        </a>
+      </div>
+      <div class="-mr-2 -my-2 md:hidden">
+        <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+          <span class="sr-only">Open menu</span>
+          <!-- Heroicon name: outline/menu -->
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <nav class="hidden md:flex space-x-10">
+        <a href="/index.html" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Le Geek Pratique
+        </a>
+        <a href="/accompagnement.html" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Accompagnement
+        </a>
+        <a href="/contact.html" class="text-base font-medium text-gray-500 hover:text-gray-900">
+          Contact
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!--
+    Mobile menu, show/hide based on mobile menu state.
+
+    Entering: "duration-200 ease-out"
+      From: "opacity-0 scale-95"
+      To: "opacity-100 scale-100"
+    Leaving: "duration-100 ease-in"
+      From: "opacity-100 scale-100"
+      To: "opacity-0 scale-95"
+  -->
+  <div class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+  </div>
+</div>
+
+  <!--  CONTACT FORM
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ]
+  }
+  ```
+-->
+<br>
+<div class="mt-10 sm:mt-0 box-border h-100 w-100 p-40 border-10">
+  <div class="md:grid md:grid-cols-3 md:gap-6">
+    <div class="md:col-span-1">
+      <div class="px-4 sm:px-0">
+        <br>
+        <h3 class="text-lg font-medium leading-6 text-gray-900">Pour me contacter</h3>
+        <p class="mt-1 text-sm text-gray-600">
+          Vous pouvez utiliser le formulaire de contact ou adresser un e-mail à contact(a)legeekpratique.fr
+        </p>
+      </div>
+    </div>
+    <div class="mt-5 md:mt-0 md:col-span-2">
+      <form action="#" method="POST">
+        <div class="shadow overflow-hidden sm:rounded-md">
+          <div class="px-4 py-5 bg-white sm:p-6">
+            <div class="grid grid-cols-6 gap-6">
+              <div class="col-span-6 sm:col-span-3">
+                <label for="first_name" class="block text-sm font-medium text-gray-700">Votre prénom</label>
+                <input type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+
+              <div class="col-span-6 sm:col-span-3">
+                <label for="last_name" class="block text-sm font-medium text-gray-700">Votre nom</label>
+                <input type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+
+              <div class="col-span-6 sm:col-span-4">
+                <label for="email_address" class="block text-sm font-medium text-gray-700">Votre e-mail</label>
+                <input type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+
+              <div class="col-span-6 sm:col-span-4">
+                <label for="phone_number" class="block text-sm font-medium text-gray-700">Votre numéro de téléphone</label>
+                <input type="text" name="phone_number" id="phone_number" autocomplete="phone_number" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div>
+
+              <!-- <div class="col-span-6 sm:col-span-3">
+                <label for="country" class="block text-sm font-medium text-gray-700">Pays / Région</label>
+                <select id="country" name="country" autocomplete="country" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                  <option>France</option>
+                  <option>Autres</option>
+                </select>
+              </div> -->
+
+              <!-- <div class="col-span-6">
+                <label for="street_address" class="block text-sm font-medium text-gray-700">Rue / Lieu dit</label>
+                <input type="text" name="street_address" id="street_address" autocomplete="street-address" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div> -->
+
+              <div class="col-span-6">
+                <label for="message" class="block text-sm font-medium text-gray-700">Votre message</label>
+                <textarea name="message" id="message" autocomplete="message" rows="8" cols="50" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"></textarea>
+              </div>
+
+              <!-- <div class="col-span-6 sm:col-span-6 lg:col-span-2">
+                <label for="city" class="block text-sm font-medium text-gray-700">Ville</label>
+                <input type="text" name="city" id="city" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div> -->
+
+<!--               <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <label for="state" class="block text-sm font-medium text-gray-700">Département</label>
+                <input type="text" name="state" id="state" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div> -->
+
+              <!-- <div class="col-span-6 sm:col-span-3 lg:col-span-2">
+                <label for="postal_code" class="block text-sm font-medium text-gray-700">Code Postal</label>
+                <input type="text" name="postal_code" id="postal_code" autocomplete="postal-code" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+              </div> -->
+            </div>
+          </div>
+          <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+            <button type="submit" class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              Envoyer
+            </button>
+          </div>
+        </div>
+      </form>
+      <br>
+    </div>
+  </div>
+</div>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-100">
+    <div class="container mx-auto px-6 pt-10 pb-6">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <!-- <h5 class="uppercase mb-6 font-bold">Links</h5>
+          <ul class="mb-4">
+            <li class="mt-2">
+              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">FAQ</a>
+            </li>
+            <li class="mt-2">
+              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Help</a>
+            </li>
+            <li class="mt-2">
+              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Support</a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <!-- <h5 class="uppercase mb-6 font-bold"></h5>
+          <ul class="mb-4">
+            <li class="mt-2">
+              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500">Données personnelles</a>
+            </li>
+            <li class="mt-2">
+              <a href="#" class="hover:underline text-gray-600 hover:text-orange-500"></a>
+            </li>
+          </ul> -->
+        </div>
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <h5 class="uppercase mb-6 font-bold"></h5>
+          <ul class="mb-4">
+            <li class="mt-2">
+              <a href="/mention-legales.html" class="hover:underline text-gray-600 hover:text-orange-500">Mentions légales</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/4 text-center md:text-left">
+          <h5 class="uppercase mb-6 font-bold"></h5>
+          <ul class="mb-4">
+            <li class="mt-2">
+              <p class="text-gray-600">Réalisé avec &#9825; par <a href="#" class="hover:underline hover:text-orange-500">legeekpratique.fr</a></p>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
